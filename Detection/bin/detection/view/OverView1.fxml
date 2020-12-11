@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.effect.ColorAdjust?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="DetctionController">
+   <children>
+      <SplitPane dividerPositions="0.3612040133779264" layoutX="136.0" layoutY="162.0" prefHeight="600.0" prefWidth="600.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="598.0" prefWidth="265.0">
+               <children>
+                  <Button fx:id="uploadBtn_id" layoutX="85.0" layoutY="39.0" mnemonicParsing="false" onAction="#upload_image" prefHeight="25.0" prefWidth="106.0" text="Upload Image" />
+                  <Label fx:id="path_id" layoutX="43.0" layoutY="128.0" prefHeight="35.0" prefWidth="189.0" text="Image Path" />
+               </children>
+            </AnchorPane>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="160.0" prefWidth="100.0">
+               <children>
+                  <ImageView fitHeight="470.0" fitWidth="490.0" layoutX="7.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@yolo.jpg" />
+                     </image>
+                  </ImageView>
+                  <ButtonBar layoutX="160.0" layoutY="544.0" prefHeight="40.0" prefWidth="300.0">
+                    <buttons>
+                      <Button fx:id="detectBtn_id" mnemonicParsing="false" onAction="#detect" prefHeight="25.0" text="Detect Objects" />
+                        <Button fx:id="detailsBtn_id" mnemonicParsing="false" onAction="#details" text="Display Image Details" />
+                    </buttons>
+                  </ButtonBar>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+   </children>
+   <effect>
+      <ColorAdjust />
+   </effect>
+</AnchorPane>
